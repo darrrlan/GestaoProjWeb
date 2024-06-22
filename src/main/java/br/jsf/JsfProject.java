@@ -14,16 +14,17 @@ import lombok.Setter;
 public class JsfProject {
 
     @EJB
-    private EjbProject ejbProject; 
-    
+    private EjbProject ejbProject;
+
     @Getter @Setter
     private int id;
+
     @Getter @Setter
     private String name;
-    
+
     @Getter @Setter
     private String description;
-    
+
     @Getter
     private String message;
 
@@ -31,43 +32,62 @@ public class JsfProject {
     }
 
     public String addProject() {
-        ejbProject.addProject(this.name, this.description);
-        this.message = "Projeto cadastrado com sucesso: " + this.name;
-        return "projectList?faces-redirect=true";
+        try {
+            ejbProject.addProject(name, description);
+            message = "Projeto cadastrado com sucesso: " + name;
+            return "projectList?faces-redirect=true";
+        } catch (Exception e) {
+            message = "Erro ao cadastrar projeto: " + e.getMessage();
+            return null;
+        }
     }
 
     public List<Project> getAll() {
-        return ejbProject.getAll();
+        try {
+            return ejbProject.getAll();
+        } catch (Exception e) {
+            message = "Erro ao carregar projetos: " + e.getMessage();
+            return null;
+        }
     }
 
     public String removeProjectById(int id) {
-        System.out.println("Removendo projeto com ID: " + id);
-        ejbProject.removeProjectById(id);
-        this.message = "Projeto removido com sucesso: ID " + id;
-        return "projectList?faces-redirect=true";
-    }
-    
-     public String loadProjectById() {
-         System.out.print(id);
-        Project project = ejbProject.getProjectById(this.id);
-        if (project != null) {
-            this.id = project.getId();
-            System.out.print(id);
-            this.name = project.getName();
-            System.out.print(name);
-            this.description = project.getDescription();
-            System.out.print(description);
-            return "";
-        } else {
-            this.message = "Projeto não encontrado: ID " + id;
+        try {
+            ejbProject.removeProjectById(id);
+            message = "Projeto removido com sucesso: ID " + id;
             return "projectList?faces-redirect=true";
+        } catch (Exception e) {
+            message = "Erro ao remover projeto: " + e.getMessage();
+            return null;
+        }
+    }
+
+    public String loadProjectById() {
+        try {
+            Project project = ejbProject.getProjectById(id);
+            if (project != null) {
+                this.id = project.getId();
+                this.name = project.getName();
+                this.description = project.getDescription();
+                return "";
+            } else {
+                message = "Projeto não encontrado: ID " + id;
+                return "projectList?faces-redirect=true";
+            }
+        } catch (Exception e) {
+            message = "Erro ao carregar projeto: " + e.getMessage();
+            return null;
         }
     }
 
     public String updateProject() {
-         System.out.print(this.id);
-        ejbProject.updateProject(this.id, this.name, this.description);
-        this.message = "Projeto atualizado com sucesso: " + this.name;
-        return "projectList?faces-redirect=true";
+        try {
+            ejbProject.updateProject(id, name, description);
+            message = "Projeto atualizado com sucesso: " + name;
+            return "projectList?faces-redirect=true";
+        } catch (Exception e) {
+            message = "Erro ao atualizar projeto: " + e.getMessage();
+            return null;
+        }
     }
 }
