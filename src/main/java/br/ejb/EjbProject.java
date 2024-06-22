@@ -1,31 +1,31 @@
 package br.ejb;
 
+import br.data.crud.CrudProject;
 import br.data.model.Project;
 import jakarta.ejb.LocalBean;
 import jakarta.ejb.Stateless;
-import java.util.ArrayList;
 import java.util.List;
 
-/**
- * EJB para operações relacionadas a Project.
- */
 @Stateless
 @LocalBean
 public class EjbProject {
 
-    // Lista para armazenar os projetos
-    private List<Project> projects = new ArrayList<>();
-
-    // Variável para armazenar a última mensagem de texto
+    private CrudProject crudProject = new CrudProject();
+    
 
     // Método para adicionar um novo projeto
-    public void addProject(int id, String name, String description) {
+    public void addProject(String name, String description) {
+        int id = crudProject.getAll().size() + 1;
         Project project = new Project(id, name, description);
-        projects.add(project);
+        crudProject.add(project);
+        System.out.println(project);
         
-        // Define a mensagem de texto após cadastrar o projeto
-        System.out.print("Projeto cadastrado com sucesso: " + project.getName());
+        System.out.println("Projeto cadastrado com sucesso: " + project.getName());
+    }
+
+    // Método para obter todos os projetos
+    public List<Project> getAll() {
+        System.out.println(crudProject.getAll());
+        return crudProject.getAll();
     }
 }
-
-  

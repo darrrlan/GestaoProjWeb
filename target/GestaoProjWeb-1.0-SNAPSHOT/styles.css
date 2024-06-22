@@ -1,0 +1,107 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 20px;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group .btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group .btn:hover {
+    background-color: #45a049;
+}
+.form-group input[type="text"]#projectDescription {
+    width: 200%; /* Largura total do contêiner pai */
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 200px; /* Altura mínima do campo de descrição */
+}
+
+.form-group .btn, .form-group .btn-table {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Same color as 'Adicionar Projeto' button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group .btn:hover, .form-group .btn-table:hover {
+    background-color: #45a049; /* Darker shade for hover effect */
+}
+
+/* Specific style for the 'Tabela de Projetos' button */
+.form-group .btn-table {
+    margin-left: 550px; /* Adjust spacing between buttons */
+}
+
+
+/* tabela*/
+
+.projectList {
+    width: 100%;
+    border-collapse: collapse; /* Para mesclar as bordas da tabela */
+    margin-top: 20px;
+    font-family: Arial, sans-serif; /* Fonte para todo o conteúdo da tabela */
+}
+
+/* Estilo para as células da tabela */
+.projectList td, .projectList th {
+    border: 1px solid #ddd; /* Borda fina cinza */
+    padding: 12px; /* Espaçamento interno das células */
+    text-align: left; /* Alinhamento do texto à esquerda */
+}
+
+/* Estilo para o cabeçalho da tabela */
+.projectList th {
+    background-color: #f2f2f2; /* Cor de fundo do cabeçalho */
+    color: #333; /* Cor do texto no cabeçalho */
+}
+
+/* Estilo para as linhas pares da tabela */
+.projectList tr:nth-child(even) {
+    background-color: #f9f9f9; /* Cor de fundo das linhas pares */
+}

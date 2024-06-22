@@ -2,28 +2,46 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Adicionar Projeto</title>
+        <link rel="stylesheet" type="text/css" href="#{request.contextPath}/styles.css" />
+        <script>
+            function validarCampos() {
+                var nomeProjeto = document.getElementById("formProjeto:projectName").value.trim();
+                var descricaoProjeto = document.getElementById("formProjeto:projectDescription").value.trim();
 
-<h:head>
-    <title>Adicionar Projeto</title>
-</h:head>
+                if (nomeProjeto === '' || descricaoProjeto === '') {
+                    alert('Por favor, preencha todos os campos.');
+                    return false; // Impede o envio do formulário
+                }
 
-<h:body>
-    <h2>Adicionar Novo Projeto</h2>
-    
-    <h:form>
-        <h:panelGrid columns="2">
-            <h:outputLabel for="projectId">ID do Projeto:</h:outputLabel>
-            <h:inputText id="projectId" value="#{jsfProject.id}" required="true"/>
-            
-            <h:outputLabel for="projectName">Nome do Projeto:</h:outputLabel>
-            <h:inputText id="projectName" value="#{jsfProject.name}" required="true"/>
-            
-            <h:outputLabel for="projectDescription">Descrição do Projeto:</h:outputLabel>
-            <h:inputText id="projectDescription" value="#{jsfProject.description}" required="true"/>
-        </h:panelGrid>
-        
-        <h:commandButton value="Adicionar Projeto" action="#{jsfProject.addProject}" />
-    </h:form>
-    
-</h:body>
+                // Exibir popup personalizado com "Atenção!"
+                alert('Atenção! Verifique os campos antes de continuar.');
+
+                return true; // Permite o envio do formulário
+            }
+        </script>
+    </h:head>
+    <h:body>
+        <div class="container">
+            <h2>Adicionar Novo Projeto</h2>
+            <h:form id="formProjeto">
+                <div class="form-group">
+                    <label for="projectName">Nome do Projeto:</label>
+                    <h:inputText id="projectName" value="#{jsfProject.name}" />
+                </div>
+                <div class="form-group">
+                    <label for="projectDescription">Descrição do Projeto:</label>
+                    <h:inputText id="projectDescription" value="#{jsfProject.description}" />
+                </div>
+                <div class="form-group">
+                    <h:commandButton styleClass="btn" value="Adicionar Projeto"
+                                     action="#{jsfProject.addProject}"
+                                     onclick="return validarCampos();" />
+                    <h:commandButton styleClass="btn btn-table" value="Tabela de Projetos"
+                                     action="projectList?faces-redirect=true" immediate="true" />
+                </div>
+            </h:form>
+        </div>
+    </h:body>
 </html>
