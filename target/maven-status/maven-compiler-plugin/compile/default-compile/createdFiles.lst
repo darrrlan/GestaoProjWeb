@@ -1,0 +1,5 @@
+br\ejb\EjbProject.class
+utfpr\edu\br\gestaoprojweb\JakartaRestConfiguration.class
+utfpr\edu\br\gestaoprojweb\resources\JakartaEE91Resource.class
+br\jsf\JsfProject.class
+br\data\model\Project.class
