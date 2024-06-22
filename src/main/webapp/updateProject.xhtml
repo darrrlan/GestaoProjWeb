@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Atualizar Projeto</title>
+    <h:outputStylesheet library="css" name="styles.css" />
+</h:head>
+<h:body>
+    <h:form>
+        <h2>Atualizar Projeto</h2>
+        
+        <h:outputLabel for="editName" value="Nome:" />
+        <h:inputText id="editName" value="#{jsfProject.name}" />
+        
+        <h:outputLabel for="editDesc" value="Descrição:" />
+        <h:inputText id="editDesc" value="#{jsfProject.description}" />
+        
+        <br/>
+        <h:commandButton styleClass="btn btn-table" value="Salvar"
+                         action="#{jsfProject.updateProject}" />
+                         
+        <h:messages styleClass="error" globalOnly="true" />
+    </h:form>
+</h:body>
+</html>

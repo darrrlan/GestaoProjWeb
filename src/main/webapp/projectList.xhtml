@@ -2,32 +2,36 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-
-    <h:head>
-        <title>Lista de Projetos</title>
-        <link rel="stylesheet" type="text/css" href="#{request.contextPath}/styles.css" />
-    </h:head>
-
-    <h:body>
-        <h2>Lista de Projetos</h2>
-
-        <h:dataTable value="#{jsfProject.getAll()}" var="project" styleClass="projectList">
+<h:head>
+    <title>Gestão de Projetos</title>
+</h:head>
+<h:body>
+    <h:form>
+        <h:dataTable value="#{jsfProject.getAll()}" var="project" border="1">
             <h:column>
                 <f:facet name="header">ID</f:facet>
-                    #{project.id}
+                #{project.id}
             </h:column>
             <h:column>
                 <f:facet name="header">Nome</f:facet>
-                    #{project.name}
+                #{project.name}
             </h:column>
             <h:column>
                 <f:facet name="header">Descrição</f:facet>
-                    #{project.description}
+                #{project.description}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Ações</f:facet>
+                <h:form>
+                    <h:commandButton value="Atualizar"
+                                     action="updateProject?faces-redirect=true" immediate="true" />
+                    <h:commandButton value="Remover" action="#{jsfProject.removeProjectById(project.id)}" />
+                </h:form>
             </h:column>
         </h:dataTable>
-        <h:form>
-            <h:commandButton value="Adicionar Novo Projeto" action="index?faces-redirect=true" />
-        </h:form>
-    </h:body>
-
+        
+        <h:commandButton styleClass="btn btn-table" value="Adicionar novo projeto"
+                         action="index?faces-redirect=true" immediate="true" />
+    </h:form>
+</h:body>
 </html>

@@ -11,13 +11,10 @@
                 var descricaoProjeto = document.getElementById("formProjeto:projectDescription").value.trim();
 
                 if (nomeProjeto === '' || descricaoProjeto === '') {
-                    alert('Por favor, preencha todos os campos.');
+                     alert('Atenção! Verifique os campos antes de continuar.');
                     return false; // Impede o envio do formulário
                 }
-
-                // Exibir popup personalizado com "Atenção!"
-                alert('Atenção! Verifique os campos antes de continuar.');
-
+        
                 return true; // Permite o envio do formulário
             }
         </script>

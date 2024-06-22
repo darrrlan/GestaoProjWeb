@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"br.data.crud","l":"CrudProject"},{"p":"br.ejb","l":"EjbProject"},{"p":"utfpr.edu.br.gestaoprojweb.resources","l":"JakartaEE91Resource"},{"p":"utfpr.edu.br.gestaoprojweb","l":"JakartaRestConfiguration"},{"p":"br.jsf","l":"JsfProject"},{"p":"br.data.model","l":"Project"}];updateSearchResults();

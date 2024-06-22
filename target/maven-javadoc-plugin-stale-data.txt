@@ -1,0 +1,55 @@
+@options
+@packages
+-classpath
+'C:/Users/darla/.m2/repository/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar;C:/Users/darla/.m2/repository/jakarta/platform/jakarta.jakartaee-api/9.1.0/jakarta.jakartaee-api-9.1.0.jar'
+-encoding
+'UTF-8'
+-protected
+--release
+11
+-sourcepath
+'C:/Users/darla/OneDrive/Documentos/NetBeansProjects/GestaoProjWeb/src/main/java;C:/Users/darla/OneDrive/Documentos/NetBeansProjects/GestaoProjWeb/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/darla/OneDrive/Documentos/NetBeansProjects/GestaoProjWeb/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'GestaoProjWeb-1.0-SNAPSHOT 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' 'C:/Users/darla/OneDrive/Documentos/NetBeansProjects/GestaoProjWeb/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'GestaoProjWeb-1.0-SNAPSHOT 1.0-SNAPSHOT API'
+br.data.crud
+br.data.model
+br.ejb
+br.jsf
+utfpr.edu.br.gestaoprojweb
+utfpr.edu.br.gestaoprojweb.resources
+C:\Users\darla\.m2\repository\org\projectlombok\lombok\1.18.24\lombok-1.18.24.jar = 1718916934751
+C:\Users\darla\.m2\repository\jakarta\platform\jakarta.jakartaee-api\9.1.0\jakarta.jakartaee-api-9.1.0.jar = 1718898432224
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\src\main\java = 1719002855273
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\generated-sources\annotations = 1719003359887
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\allclasses-index.html = 1719003400689
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\allpackages-index.html = 1719003400697
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\element-list = 1719003400325
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\help-doc.html = 1719003400773
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\index-all.html = 1719003400745
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\index.html = 1719003400656
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\jquery-ui.overrides.css = 1719003400848
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\member-search-index.js = 1719003400715
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\module-search-index.js = 1719003400701
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\overview-summary.html = 1719003400750
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\overview-tree.html = 1719003400647
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\package-search-index.js = 1719003400706
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\script.js = 1719003400789
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\search.js = 1719003400813
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\stylesheet.css = 1719003400785
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\tag-search-index.js = 1719003400718
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\type-search-index.js = 1719003400711
