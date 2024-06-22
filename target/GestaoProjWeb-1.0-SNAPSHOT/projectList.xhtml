@@ -4,34 +4,86 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
     <title>Gestão de Projetos</title>
+    <style>
+        /* Estilos CSS para os botões */
+        .btn-action {
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .btn-edit {
+            color: #fff;
+            background-color: #007bff;
+            border: 1px solid #007bff;
+        }
+
+        .btn-remove {
+            color: #fff;
+            background-color: #dc3545;
+            border: 1px solid #dc3545;
+        }
+
+        .btn-action:hover {
+            opacity: 0.8;
+        }
+
+        /* Estilos para a Tabela de Projetos */
+        .projectList {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .projectList td, .projectList th {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .projectList th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        .projectList tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Espaço entre os botões */
+        .action-buttons {
+            display: inline-block;
+            margin-left: 10px;
+        }
+    </style>
 </h:head>
 <h:body>
-    <h:form>
-        <h:dataTable value="#{jsfProject.getAll()}" var="project" border="1">
-            <h:column>
-                <f:facet name="header">ID</f:facet>
-                #{project.id}
-            </h:column>
-            <h:column>
-                <f:facet name="header">Nome</f:facet>
-                #{project.name}
-            </h:column>
-            <h:column>
-                <f:facet name="header">Descrição</f:facet>
-                #{project.description}
-            </h:column>
-            <h:column>
-                <f:facet name="header">Ações</f:facet>
-                <h:form>
-                    <h:commandButton value="Atualizar"
-                                     action="updateProject?faces-redirect=true" immediate="true" />
-                    <h:commandButton value="Remover" action="#{jsfProject.removeProjectById(project.id)}" />
-                </h:form>
-            </h:column>
-        </h:dataTable>
-        
-        <h:commandButton styleClass="btn btn-table" value="Adicionar novo projeto"
-                         action="index?faces-redirect=true" immediate="true" />
-    </h:form>
+    <div class="container">
+        <h2>Tabela de Projetos</h2>
+        <h:form>
+            <h:dataTable value="#{jsfProject.getAll()}" var="project" styleClass="projectList">
+                <h:column>
+                    <f:facet name="header">Nome</f:facet>
+                    #{project.name}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Descrição</f:facet>
+                    #{project.description}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Ações</f:facet>
+                    <h:link styleClass="btn-action btn-edit" outcome="editProject" value="Editar">
+                        <f:param name="projectId" value="#{project.id}" />
+                    </h:link>
+                    <h:commandButton styleClass="btn-action btn-remove action-buttons" action="#{jsfProject.removeProjectById(project.id)}" value="Remover" immediate="true">
+                        <f:param name="projectId" value="#{project.id}" />
+                    </h:commandButton>
+                </h:column>
+            </h:dataTable>
+            <h:button styleClass="btn-action btn-table" value="Adicionar novo projeto" outcome="index" />
+        </h:form>
+    </div>
 </h:body>
 </html>
