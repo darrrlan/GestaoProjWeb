@@ -1,4 +1,5 @@
 br.data.crud
+br.data.lock
 br.data.model
 br.ejb
 br.jsf

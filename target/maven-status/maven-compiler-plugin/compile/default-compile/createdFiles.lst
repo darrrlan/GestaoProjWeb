@@ -1,4 +1,6 @@
+br\data\lock\Lock.class
 br\data\model\Project.class
+br\data\lock\LockManager.class
 br\ejb\EjbProject.class
 utfpr\edu\br\gestaoprojweb\JakartaRestConfiguration.class
 utfpr\edu\br\gestaoprojweb\resources\JakartaEE91Resource.class
