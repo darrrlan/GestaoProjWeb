@@ -1,8 +1,13 @@
-br\data\lock\Lock.class
+br\services\PublisherServlet.class
 br\data\model\Project.class
 br\data\lock\LockManager.class
+br\rmi\RmiStartupServlet.class
+br\jsf\JsfProject.class
+br\data\crud\CrudProject.class
+br\data\lock\Lock.class
+br\ejb\EjbProjectImpl.class
+br\rmi\EjbProjectImpl.class
 br\ejb\EjbProject.class
 utfpr\edu\br\gestaoprojweb\JakartaRestConfiguration.class
 utfpr\edu\br\gestaoprojweb\resources\JakartaEE91Resource.class
-br\jsf\JsfProject.class
-br\data\crud\CrudProject.class
+br\rmi\ProjectService.class

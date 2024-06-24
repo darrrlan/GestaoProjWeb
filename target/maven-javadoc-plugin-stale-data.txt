@@ -31,26 +31,29 @@ br.data.lock
 br.data.model
 br.ejb
 br.jsf
+br.rmi
+br.services
 utfpr.edu.br.gestaoprojweb
 utfpr.edu.br.gestaoprojweb.resources
 C:\Users\darla\.m2\repository\org\projectlombok\lombok\1.18.24\lombok-1.18.24.jar = 1718916934751
 C:\Users\darla\.m2\repository\jakarta\platform\jakarta.jakartaee-api\9.1.0\jakarta.jakartaee-api-9.1.0.jar = 1718898432224
-C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\src\main\java = 1719007968243
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\src\main\java = 1719164299999
 C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\generated-sources\annotations = 1718923436929
-C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\allclasses-index.html = 1719082770649
-C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\allpackages-index.html = 1719082770655
-C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\element-list = 1719082770332
-C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\help-doc.html = 1719082770721
-C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\index-all.html = 1719082770706
-C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\index.html = 1719082770610
-C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\jquery-ui.overrides.css = 1719082770798
-C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\member-search-index.js = 1719082770668
-C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\module-search-index.js = 1719082770659
-C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\overview-summary.html = 1719082770712
-C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\overview-tree.html = 1719082770601
-C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\package-search-index.js = 1719082770662
-C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\script.js = 1719082770731
-C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\search.js = 1719082770737
-C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\stylesheet.css = 1719082770728
-C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\tag-search-index.js = 1719082770671
-C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\type-search-index.js = 1719082770665
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\allclasses-index.html = 1719166192890
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\allpackages-index.html = 1719166192897
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\element-list = 1719166192421
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\help-doc.html = 1719166192970
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\index-all.html = 1719166192954
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\index.html = 1719166192851
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\jquery-ui.overrides.css = 1719166193009
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\member-search-index.js = 1719166192909
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\module-search-index.js = 1719166192900
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\overview-summary.html = 1719166192960
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\overview-tree.html = 1719166192842
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\package-search-index.js = 1719166192904
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\script.js = 1719166192978
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\search.js = 1719166192983
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\serialized-form.html = 1719166192625
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\stylesheet.css = 1719166192975
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\tag-search-index.js = 1719166192912
+C:\Users\darla\OneDrive\Documentos\NetBeansProjects\GestaoProjWeb\target\apidocs\type-search-index.js = 1719166192906
