@@ -6,6 +6,44 @@
         <title>Adicionar Projeto</title>
         <link rel="stylesheet" type="text/css" href="#{request.contextPath}/styles.css" />
         <script>
+            // Função para iniciar o serviço RMI
+            function startRmiService() {
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "#{request.contextPath}/rmi-startup", true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            console.log("RMI service started successfully!");
+                        } else {
+                            console.error("Failed to start RMI service. Status: " + xhr.status);
+                        }
+                    }
+                };
+                xhr.send();
+            }
+            
+            function startJAX() {
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "#{request.contextPath}/GestaoProjetosServicePublisherServlet", true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            console.log("RMI service started successfully!");
+                        } else {
+                            console.error("Failed to start RMI service. Status: " + xhr.status);
+                        }
+                    }
+                };
+                xhr.send();
+            }
+
+            // Chamar a função startRmiService() assim que a página for carregada
+            document.addEventListener("DOMContentLoaded", function() {
+                startRmiService();
+                startJAX();
+            });
+            
+            // Função para validar os campos do formulário
             function validarCampos() {
                 var nomeProjeto = document.getElementById("formProjeto:projectName").value.trim();
                 var descricaoProjeto = document.getElementById("formProjeto:projectDescription").value.trim();

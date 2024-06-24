@@ -1,17 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <web-app version="5.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd">
     <context-param>
         <param-name>jakarta.faces.PROJECT_STAGE</param-name>
         <param-value>Development</param-value>
     </context-param>
     <servlet>
-        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-name>FacesServlet</servlet-name>
         <servlet-class>jakarta.faces.webapp.FacesServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
-        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-name>FacesServlet</servlet-name>
         <url-pattern>/faces/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RmiStartupServlet</servlet-name>
+        <servlet-class>br.rmi.RmiStartupServlet</servlet-class> <!-- Substitua pelo pacote e classe corretos -->
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RmiStartupServlet</servlet-name>
+        <url-pattern>/rmi-startup</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>PublisherServlet</servlet-name>
+        <servlet-class>br.services.PublisherServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PublisherServlet</servlet-name>
+        <url-pattern>/JAX-start</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
