@@ -3,5 +3,7 @@ br.data.lock
 br.data.model
 br.ejb
 br.jsf
+br.rmi
+br.services
 utfpr.edu.br.gestaoprojweb
 utfpr.edu.br.gestaoprojweb.resources
