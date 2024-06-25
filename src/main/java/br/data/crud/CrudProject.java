@@ -1,10 +1,11 @@
 package br.data.crud;
 
 import br.data.model.Project;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CrudProject {
+public class CrudProject implements Serializable {
 
     private List<Project> proj = new ArrayList<>();
 

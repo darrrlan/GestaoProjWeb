@@ -1,10 +1,11 @@
 package br.data.model;
 
+import java.io.Serializable;
 import lombok.Data;
 
 @Data
-public class Project {
-    
+public class Project implements Serializable {
+    private static final long serialVersionUID = 4370075544319805280L; // Definindo serialVersionUID explicitamente
     private int id;
     private String name;
     private String description;
